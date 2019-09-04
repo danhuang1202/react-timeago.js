@@ -61,20 +61,24 @@ fs.readdirSync(hookPath).forEach(directory => {
 })
 
 const options = entries.map(entry => {
-  const { input, output, plugins = {} } = entry
+  const { input, output } = entry
 
   return {
     input,
     output,
     plugins: [
       external(),
-      commonjs(),
+      commonjs({
+        namedExports: {
+          'timeago.js': ['format', 'register']
+        }
+      }),
       babel({
         extensions,
         exclude
       }),
       resolve({
-        extensions: ['.ts', '.tsx']
+        extensions
       }),
       alias({
         resolve: ['.tsx', '.ts', '/index.tsx', '/index.ts'],

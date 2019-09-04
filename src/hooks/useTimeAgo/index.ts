@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import timeagoJs from 'timeago.js'
+import { format, register } from 'timeago.js'
 
 /** start date, could be Date instance, timestamp or date string */
 export type DateTime = Date | number | string
@@ -33,12 +33,12 @@ const useTimeAgo = (dateTime: DateTime, options?: Options): string => {
 
   const { locale, localeRegister, interval } = { ...defaultOptions, ...options }
   const updateTimeAge = () => {
-    setTimeago(timeagoJs.format(dateTime, locale))
+    setTimeago(format(dateTime, locale))
   }
 
   useEffect(() => {
     if (localeRegister) {
-      timeagoJs.register(locale, localeRegister)
+      register(locale, localeRegister)
     }
     updateTimeAge()
 
