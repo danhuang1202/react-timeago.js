@@ -16,7 +16,7 @@ exports[`components: TimeAgo [snapshot] TimeAgo with custom locale register 1`] 
 </div>
 `;
 
-exports[`components: TimeAgo [snapshot] TimeAgo with update timer 1`] = `
+exports[`components: TimeAgo [snapshot] TimeAgo with timer update 1`] = `
 <div>
   <p>
     1 minute ago
