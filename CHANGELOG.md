@@ -1,3 +1,7 @@
+## <small>1.0.1 (2019-09-04)</small>
+
+* fix: remove unused import ([2393965](https://github.com/danhuang1202/react-timeago.js/commit/2393965))
+
 ## 1.0.0 (2019-09-04)
 
 * refactor: reset version ([bb1affe](https://github.com/danhuang1202/react-timeago.js/commit/bb1affe))
