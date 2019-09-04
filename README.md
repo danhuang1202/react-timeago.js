@@ -1,9 +1,9 @@
 # react-timeago.js
-react component and hooks for [timeago.js](https://github.com/hustcc/timeago.js)
 [![Build Status](https://travis-ci.org/danhuang1202/react-timeago.js.svg?branch=master)](https://travis-ci.org/danhuang1202/react-timeago.js)
 [![codecov](https://codecov.io/gh/danhuang1202/react-timeago.js/branch/master/graph/badge.svg)](https://codecov.io/gh/danhuang1202/react-timeago.js)
 [![NPM version](https://img.shields.io/npm/v/react-timeago.js.svg)](https://www.npmjs.com/package/react-timeago.js)
 
+react component and hooks for [timeago.js](https://github.com/hustcc/timeago.js),
 for more information, please see: <a href="https://danhuang1202.github.io/react-timeago.js/">Document</a>
 
 
