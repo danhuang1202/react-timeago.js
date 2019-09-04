@@ -1,5 +1,5 @@
-import React, { createElement, FunctionComponent, ReactNode } from 'react'
-import useTimeAgo, {DateTime, Options} from '@hooks/useTimeAgo'
+import { createElement, FunctionComponent } from 'react'
+import useTimeAgo, { DateTime, Options } from '@hooks/useTimeAgo'
 
 type Props = {
   /**
@@ -20,9 +20,9 @@ const TimeAgo: FunctionComponent<Props> = ({
   className,
   dateTime,
   options
-}) =>{
+}) => {
   const timeAgo = useTimeAgo(dateTime, options)
-  
+
   return createElement(
     elementType,
     {

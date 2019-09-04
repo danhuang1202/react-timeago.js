@@ -1,7 +1,8 @@
 import React from 'react'
-import {render} from '@testing-library/react'
+import { render } from '@testing-library/react'
 import TimeAgo from '@components/TimeAgo'
 
+/*eslint-disable */
 const mockDate = (now, millisecondsLater) => {
   const originDate = Date
   const mockDateAfterOneMins = new originDate(now + millisecondsLater)
@@ -9,14 +10,15 @@ const mockDate = (now, millisecondsLater) => {
   global.Date = class extends Date {
     // @ts-ignore
     constructor(date) {
-      if (date ) {
+      if (date) {
         new originDate(date)
       }
-      
+
       return date ? new originDate(date) : mockDateAfterOneMins
     }
   }
 }
+/*eslint-enable */
 
 describe('components: TimeAgo', () => {
   it('[snapshot] TimeAgo', () => {
@@ -25,9 +27,7 @@ describe('components: TimeAgo', () => {
       dateTime: Date.now()
     }
 
-    const {container} = render(
-      <TimeAgo {...props} />
-    )
+    const { container } = render(<TimeAgo {...props} />)
     expect(container).toMatchSnapshot()
   })
 
@@ -43,10 +43,8 @@ describe('components: TimeAgo', () => {
       }
     }
 
-    const {container} = render(
-      <TimeAgo {...props} />
-    )
-    
+    const { container } = render(<TimeAgo {...props} />)
+
     mockDate(dateTime, 60000)
     jest.runOnlyPendingTimers()
 
@@ -86,9 +84,7 @@ describe('components: TimeAgo', () => {
       }
     }
 
-    const {container} = render(
-      <TimeAgo {...props} />
-    )
+    const { container } = render(<TimeAgo {...props} />)
 
     mockDate(dateTime, 60000)
     jest.runOnlyPendingTimers()

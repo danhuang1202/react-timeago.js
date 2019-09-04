@@ -1,19 +1,23 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import timeagoJs from 'timeago.js'
 
 /** start date, could be Date instance, timestamp or date string */
 export type DateTime = Date | number | string
 
 export type Options = {
-  /** 
+  /**
    *  locale
    *  @default en_US
    * */
   locale?: string
   /** custom local register function */
-  localeRegister?: (number: number, index: number, total_sec?: number) => string[]
-  /** 
-   *  update interval duration in milliseconds 
+  localeRegister?: (
+    number: number,
+    index: number,
+    totalSecoends?: number
+  ) => string[]
+  /**
+   *  update interval duration in milliseconds
    *  @default 1000
    * */
   interval?: number
@@ -25,28 +29,31 @@ const defaultOptions = {
 }
 
 const useTimeAgo = (dateTime: DateTime, options?: Options): string => {
-  const {locale, localeRegister, interval} = {...defaultOptions, ...options}
-  const updateTimeAge = () => {setTimeago(timeagoJs.format(dateTime, locale))}
-
   const [timeago, setTimeago] = useState(null)
-  
+
+  const { locale, localeRegister, interval } = { ...defaultOptions, ...options }
+  const updateTimeAge = () => {
+    setTimeago(timeagoJs.format(dateTime, locale))
+  }
+
   useEffect(() => {
-    if(localeRegister) {
+    if (localeRegister) {
       timeagoJs.register(locale, localeRegister)
     }
     updateTimeAge()
-  }, [localeRegister])
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(() => {
-    if (!interval) {
-      updateTimeAge()
-      return 
-    }
-    
     const intervalId = setInterval(updateTimeAge, interval)
-    return () => {clearInterval(intervalId)}
+    return () => {
+      clearInterval(intervalId)
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dateTime, interval])
-  
+
   return timeago
 }
 
