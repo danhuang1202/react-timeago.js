@@ -1,5 +1,4 @@
 const path = require('path')
-const constant = require('../config/constant')
 
 module.exports = ({ config }) => {
   config.module.rules = [
