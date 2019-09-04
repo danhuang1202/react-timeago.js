@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/react'
-import React, {useState} from 'react'
+import React from 'react'
 import TimeAgo from '@components/TimeAgo'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, object, number } from '@storybook/addon-knobs'
@@ -34,15 +34,15 @@ storiesOf('Components', module)
     })
   )
   .add('TimeAgo', () => (
-    <TimeAgo 
+    <TimeAgo
       elementType={text('elementType', 'p')}
       className={text('className', style.wrap)}
       dateTime={number('dateTime', Date.now())}
-      options={object('options', {interval: 1000})}
+      options={object('options', { interval: 1000 })}
     />
   ))
   .add('TimeAgo with custom locale: zh_TW', () => (
-    <TimeAgo 
+    <TimeAgo
       elementType={text('elementType', 'p')}
       className={text('className', style.wrap)}
       dateTime={number('dateTime', Date.now())}

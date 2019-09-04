@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/react'
-import React, {useState} from 'react'
+import React from 'react'
 import useTimeAgo from '@hooks/useTimeAgo'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, number, object } from '@storybook/addon-knobs'
@@ -14,19 +14,15 @@ storiesOf('Hooks', module)
       inline: true
     })
   )
-  .add('useTimeAgo', () => 
-    <UseTimeAgo 
+  .add('useTimeAgo', () => (
+    <UseTimeAgo
       dateTime={number('dateTime', Date.now())}
-      options={object('options', {interval: 10000})}
+      options={object('options', { interval: 10000 })}
     />
-  )
+  ))
 
-const UseTimeAgo = ({dateTime, options}) => {
+const UseTimeAgo = ({ dateTime, options }) => {
   const timeAgo = useTimeAgo(dateTime, options)
 
-  return (
-    <div className={style.wrap}>
-      {timeAgo}
-    </div>
-  )
+  return <div className={style.wrap}>{timeAgo}</div>
 }
