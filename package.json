@@ -104,5 +104,10 @@
   "bugs": {
     "url": "https://github.com/danhuang1202/react-timeago.js/issues"
   },
-  "homepage": "https://github.com/danhuang1202/react-timeago.js#readme"
+  "homepage": "https://github.com/danhuang1202/react-timeago.js#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
