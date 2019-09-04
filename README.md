@@ -25,7 +25,7 @@ npm i react-timeago.js
   | options | object | false | undefined | options |
 
   | options | type | default | description |
-  | --- | --- | --- | --- | --- |
+  | --- | --- | --- | --- |
   | locale | string | en_US | locale |
   | localeRegister	| function | custom local register function |
   | interval | number | 1000 | update interval duration in milliseconds |
@@ -41,7 +41,7 @@ npm i react-timeago.js
   | options | object | false | undefined | options |
 
   | options | type | default | description |
-  | --- | --- | --- | --- | --- |
+  | --- | --- | --- | --- |
   | locale | string | en_US | locale |
   | localeRegister	| function | custom local register function |
   | interval | number | 1000 | update interval duration in milliseconds |
