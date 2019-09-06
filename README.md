@@ -17,12 +17,17 @@ npm i react-timeago.js
 
   Display `timeago` information inside `elementType` tag base on `dateTime` props
 
+  - Props
+
   | props | type | required | default | description |
   | --- | --- | --- | --- | --- |
   | elementType | string | false | div | html tag name for the wrap component |
   | className	| string |	false | undefined | Custom class name |
   | dateTime | Date / number / string | true | undefined | start date |
   | options | object | false | undefined | options |
+  <br/>
+
+  - Options
 
   | options | type | default | description |
   | --- | --- | --- | --- |
@@ -35,11 +40,16 @@ npm i react-timeago.js
 
   return `timeago` string base on `dateTime` props
 
+  - Arguments
+
   | props | type | required | default | description |
   | --- | --- | --- | --- | --- |
   | dateTime | Date / number / string | true | undefined | start date |
   | options | object | false | undefined | options |
+  <br/>
 
+  - Options
+  
   | options | type | default | description |
   | --- | --- | --- | --- |
   | locale | string | en_US | locale |
