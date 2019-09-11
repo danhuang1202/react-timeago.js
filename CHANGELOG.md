@@ -1,3 +1,8 @@
+## 1.1.0 (2019-09-11)
+
+* feat: use @dh-react-hooks/use-timeago ([42a2e59](https://github.com/danhuang1202/react-timeago.js/commit/42a2e59))
+* chore: update readme ([6182657](https://github.com/danhuang1202/react-timeago.js/commit/6182657))
+
 ## <small>1.0.1 (2019-09-04)</small>
 
 * fix: remove unused import ([2393965](https://github.com/danhuang1202/react-timeago.js/commit/2393965))
