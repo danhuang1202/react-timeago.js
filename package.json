@@ -45,6 +45,7 @@
   "author": "danhuang1202",
   "license": "ISC",
   "dependencies": {
+    "@dh-react-hooks/use-timeago": "^0.2.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "timeago.js": "^4.0.0-beta.2"

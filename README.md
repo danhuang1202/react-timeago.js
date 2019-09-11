@@ -36,7 +36,7 @@ npm i react-timeago.js
   | interval | number | 1000 | update interval duration in milliseconds |
 
 ## Hooks
-- useTimeAgo
+- [useTimeAgo](https://github.com/danhuang1202/DrHooks/tree/master/packages/useTimeAgo)
 
   return `timeago` string base on `dateTime` props
 
@@ -96,7 +96,7 @@ npm start storybook
 - story files list in `.stories` directory
 
 
-## Test with Jest and Puppeteer
+## Test with Jest
 ```
 npm run test
 ```
