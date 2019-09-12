@@ -1,5 +1,27 @@
 import { createElement, FunctionComponent } from 'react'
-import useTimeAgo, { DateTime, Options } from '@hooks/useTimeAgo'
+import useTimeAgo from '@hooks/useTimeAgo'
+
+/** start date, could be Date instance, timestamp or date string */
+type DateTime = Date | number | string
+
+type Options = {
+  /**
+   *  locale
+   *  @default en_US
+   * */
+  locale?: string
+  /** custom local register function */
+  localeRegister?: (
+    number: number,
+    index: number,
+    totalSecoends?: number
+  ) => string[]
+  /**
+   *  update interval duration in milliseconds
+   *  @default 1000
+   * */
+  interval?: number
+}
 
 type Props = {
   /**
