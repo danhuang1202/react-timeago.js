@@ -1,3 +1,7 @@
+## <small>1.1.1 (2019-09-12)</small>
+
+* fix: build failed ([4190f8a](https://github.com/danhuang1202/react-timeago.js/commit/4190f8a))
+
 ## 1.1.0 (2019-09-11)
 
 * feat: use @dh-react-hooks/use-timeago ([42a2e59](https://github.com/danhuang1202/react-timeago.js/commit/42a2e59))
