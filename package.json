@@ -8,7 +8,7 @@
   "scripts": {
     "ci-test": "ENABLE_COVERAGE=true COVERAGE_DIRECTORY=coverage npm run test && codecov",
     "ci-publish": "npx semantic-release",
-    "ci-build": "npm run build:bundle && npm run build:type",
+    "ci-build": "npm run build:bundle",
     "ci-build:docs": "npm run build:docs",
     "build:bundle": "rollup -c ./config/rollup.config.js",
     "build:type": "tsc --project ./config/tsconfig.type.json",
@@ -45,9 +45,7 @@
   "author": "danhuang1202",
   "license": "ISC",
   "dependencies": {
-    "@dh-react-hooks/use-timeago": "^0.4.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "@dh-react-hooks/use-timeago": "^0.4.1",
     "timeago.js": "^4.0.0-beta.2"
   },
   "peerDependencies": {
@@ -60,7 +58,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@semantic-release/changelog": "^3.0.4",
-    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/git": "^7.0.18",
     "@storybook/addon-info": "^5.0.11",
     "@storybook/addon-knobs": "^5.0.11",
     "@storybook/addon-viewport": "^5.0.11",
@@ -92,14 +90,16 @@
     "jest": "^24.8.0",
     "lint-staged": "^8.1.6",
     "prettier": "^1.17.0",
+    "react": "^16.14.0",
     "react-docgen-typescript-loader": "^3.1.0",
+    "react-dom": "^16.14.0",
     "rollup": "^1.11.3",
     "rollup-plugin-alias": "^1.5.1",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-plugin-peer-deps-external": "^2.2.0",
-    "semantic-release": "^17.2.3",
+    "semantic-release": "^17.3.9",
     "typescript": "^3.4.4"
   },
   "bugs": {
